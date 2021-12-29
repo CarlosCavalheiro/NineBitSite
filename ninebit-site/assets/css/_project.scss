@@ -1,0 +1,77 @@
+
+
+
+/*===========================
+       05.PROJECT css 
+===========================*/
+
+.project_area{
+    padding-bottom: 180px;
+}
+
+.single_project{
+    margin-top: 30px;
+    
+    & .project_image{
+        & img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    & .project_content{
+        margin-top: 25px;
+        
+        & .project_title{
+            & a{
+                font-size: 20px;
+                font-weight: 600;
+                color: $black;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & p{
+            margin-top: 5px;
+        }
+    }
+}
+
+
+.project_active{
+    & .slick-arrow{
+        position: absolute;
+        bottom: -80px;
+        right: 50%;
+        z-index: 9;
+        margin: 0 15px;
+        cursor: pointer;
+        
+        & i{
+            font-size: 18px;
+            color: $body-color;
+            line-height: 24px;
+            @include transition(0.3s);
+        }
+        
+        &.next {
+            right: auto;
+            left: 50%;
+        }
+        
+        &:hover{
+            & i{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

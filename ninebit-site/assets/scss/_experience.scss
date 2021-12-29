@@ -1,0 +1,169 @@
+
+
+
+/*===========================
+   09.WORK EXPERIENCE css 
+===========================*/
+
+.work_experience_area{}
+
+.work_experience{
+    position: relative;
+    margin-top: 30px;
+    
+    @media #{$md}{
+        margin-top: 0;
+    }
+    @media #{$xs}{
+        margin-top: 0;
+    }
+    
+    &::before{
+        position: absolute;
+        content: '';
+        left: 50%;
+        @include transform(translateX(-50%));
+        top: 0;  
+        width: 2px;
+        height: 100%;
+        background-color: $theme-color;
+        
+        @media #{$md}{
+            display: none;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+}
+
+.single_experience{
+    @media #{$md}{
+        margin-top: 25px;
+    }
+    @media #{$xs}{
+        margin-top: 25px;
+    }
+    
+    & .experience_title{
+        width: 46%;
+        
+        @media #{$md}{
+            width: 100%;
+        }
+        @media #{$xs}{
+            width: 100%;
+        }
+        
+        & .title{
+            font-size: 25px;
+            font-weight: 600;
+            
+            @media #{$xs}{
+                font-size: 20px;
+            }
+        }
+        & p{
+            color: $theme-color;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: $font-2;
+            margin-top: 10px;
+            
+            @media #{$xs}{
+                font-size: 15px;
+            }
+        }
+        & .date{
+            font-size: 16px;
+            font-weight: 600;
+            color: $body-color;
+            font-family: $font-2;
+            margin-top: 10px;
+            
+            @media #{$xs}{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    & .experience_number{
+        width: 8%;
+        text-align: center;
+        
+        @media #{$md}{
+            display: none;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+        
+        & span{
+            width: 55px;
+            height: 55px;
+            line-height: 51px;
+            text-align: center;
+            border: 2px solid $theme-color;
+            font-size: 20px;
+            font-family: $font-2;
+            color: $theme-color;
+            border-radius: 50%;
+            @include transition(0.3s);
+            background-color: $white;
+        }
+    }
+    
+    & .experience_content{
+        @include box-shadow (0px 0px 10px 0px rgba($shadow, 0.30));
+        padding: 30px;
+        border-radius: 10px;
+        background-color: $white;
+        width: 46%;    
+        @include transition(0.3s);
+        
+        @media #{$md}{
+            width: 100%;
+            margin-top: 30px;
+        }
+        @media #{$xs}{
+            width: 100%;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        
+        & p{
+            @include transition(0.3s);
+        }
+    }
+    
+    &:hover{
+        & .experience_number{
+            & span{
+                background-color: $theme-color;
+                color: $white;
+            }
+        }
+        
+        & .experience_content{
+            background-color: $theme-color;
+            
+            & p{
+                color: $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+
+
+
+/*===========================
+     07.TESTIMONIAL css 
+===========================*/
+
+
+.single_testimonial{
+    & .testimonial_author{
+        & img{
+            border-radius: 50px;
+            border-bottom-right-radius: 0;
+            
+            @media #{$xs}{
+                width: 120px;
+                border-radius: 30px;
+                border-bottom-right-radius: 0;
+            }
+            @media #{$lg}{
+                width: 120px;
+                border-radius: 30px;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+    & .testimonial_content{
+        padding-left: 30px;
+        position: relative;
+        
+        @media #{$xs}{
+            padding-left: 0;
+            margin-top: 25px;
+        }
+        @media #{$sm}{
+            padding-left: 25px;
+            margin-top: 0;
+        }
+        
+        & .author_name{
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $font-2;
+        }
+        & .sub_title{
+            font-size: 14px;
+            color: $body-color;
+            margin-top: 5px;
+        }
+        & p{
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        & .review{
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+            & li{
+                display: inline-block;
+                font-size: 14px;
+                color: #FFAE34;
+                margin: 0 2px;
+            }
+        }
+    }
+}
+
+.testimonial_active{
+    & .slick-dots{
+        width: 100%;
+        text-align: center;
+        margin-top: 46px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 3px;
+            
+            & button{
+                font-size: 0;
+                width: 13px;
+                height: 13px;
+                border: 2px solid rgba($theme-color, 0.43);
+                border-radius: 50%;
+                background: none;
+                @include transition(0.3s);
+            }
+            
+            &.slick-active{
+                & button{
+                    background-color: $theme-color;
+                    border-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.slick-initialized .slick-slide{
+    outline: 0;
+}
+
+
+
+
+
+
+
+

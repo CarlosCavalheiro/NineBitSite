@@ -1,0 +1,84 @@
+
+
+
+/*===========================
+      11.FOOTER css 
+===========================*/
+
+.footer_area{}
+
+.footer_content{
+    & .footer_social{
+        margin-top: 45px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 10px;
+            
+            & a{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 18px;
+                color: $body-color;
+                background-color: rgba($black, 0.07);
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    & .email{
+        font-size: 44px;
+        font-weight: 600;
+        color: $black;
+        margin-top: 10px;
+        
+        @media #{$xs}{
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    }
+    & .footer_menu{
+        padding-top: 20px;
+        
+        & li{
+            display: inline-block;
+            margin: 10px 20px 0;
+            
+            @media #{$xs}{
+                margin: 10px 12px 0;
+            }
+            
+            & a{
+                font-size: 16px;
+                font-weight: 600;
+                color: $black;
+                
+                @media #{$xs}{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
